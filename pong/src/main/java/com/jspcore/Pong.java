@@ -16,7 +16,7 @@ public class Pong extends AbstractVerticle {
             if (event.succeeded()) log.info("complete handler");
             else log.info("failed");
         });
-        log.info("Pongong started");
+        log.info("Pong started");
     }
 
 }

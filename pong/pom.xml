@@ -21,7 +21,19 @@
                     <resource>
                         <directory>src/main/resources</directory>
                     </resource>
-
+                </resources>
+            </build>
+        </profile>
+        <profile>
+            <id>int</id>
+            <build>
+                <resources>
+                    <resource>
+                        <directory>src/main/resources</directory>
+                    </resource>
+                    <resource>
+                        <directory>src/main/resources/int</directory>
+                    </resource>
                 </resources>
             </build>
         </profile>
