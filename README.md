@@ -2,9 +2,9 @@
 
 ## I've created 3 configurations to be able to test different configurations
 
-1. Local (uses default-cluster.xml config multicast)
-2. Development (uses cluster.xml overwriting only some properties)
-3. Test (uses cluster.xml with all properties from default-cluster.xml and overwrite some of them)
+1. Local (disable multicast, enable tcp-ip and overwrite interfaces to use local 127.0.0.1)
+2. Development (disable multicast, enable tcp-ip and overwrite interfaces with the nodes)
+3. Test (enable multicast, overwrite interfaces to fix problems when multiple network interfaces on the server)
 
 
 ## Build by environment
@@ -26,8 +26,17 @@
 ## Run the jars
 
 1. Pong:
+```java -jar pong-1.0-SNAPSHOT-fat.jar -cluster -cluster-host XXX.XXX.XXX.XX```
+for example
+```java -jar pong-1.0-SNAPSHOT-fat.jar -cluster -cluster-host 127.0.0.1```
+or
 ```java -jar pong-1.0-SNAPSHOT-fat.jar -cluster -cluster-host 192.168.112.10```
 
 2. Ping:
 ```java -jar ping-1.0-SNAPSHOT-fat.jar -cluster -cluster-host 192.168.112.9```
+for example
+```java -jar ping-1.0-SNAPSHOT-fat.jar -cluster -cluster-host 127.0.0.1```
+or
+```java -jar ping-1.0-SNAPSHOT-fat.jar -cluster -cluster-host 192.168.112.9```
+
 

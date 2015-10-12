@@ -25,15 +25,13 @@
             <ports>0</ports>
         </outbound-ports>
         <join>
-            <multicast enabled="false">
+            <multicast enabled="true">
                 <multicast-group>224.2.2.3</multicast-group>
                 <multicast-port>54327</multicast-port>
             </multicast>
-            <tcp-ip enabled="true" connection-timeout-seconds="10">
-                <interface>192.168.112.9</interface>
-                <interface>192.168.112.10</interface>
+            <tcp-ip enabled="false">
+                <interface>192.168.1.28</interface>
             </tcp-ip>
-
             <aws enabled="false">
                 <access-key>my-access-key</access-key>
                 <secret-key>my-secret-key</secret-key>
@@ -128,6 +126,7 @@
             Values of these entries might be different for that same key.
             Which value should be set for the key? Conflict is resolved by
             the policy set here. Default policy is PutIfAbsentMapMergePolicy
+
             There are built-in merge policies such as
             com.hazelcast.map.merge.PassThroughMergePolicy; entry will be added if there is no existing entry for the key.
             com.hazelcast.map.merge.PutIfAbsentMapMergePolicy ; entry will be added if the merging entry doesn't exist in the cluster.

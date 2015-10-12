@@ -32,7 +32,7 @@
                         <directory>src/main/resources</directory>
                     </resource>
                     <resource>
-                        <directory>src/main/resources/int</directory>
+                        <directory>src/main/resources/local</directory>
                     </resource>
                 </resources>
             </build>
